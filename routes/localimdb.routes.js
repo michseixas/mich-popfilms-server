@@ -3,6 +3,7 @@ const router = express.Router();
 const Top250 = require("../models/Top250.model");
 const MostPopular = require("../models/MostPopular.model");
 const Theater = require("../models/Theater.model");
+const ComingSoon = require("../models/ComingSoon.model");
 
 router.get("/Top250Movies", (req, res, next) => {
   Top250.find({})
@@ -34,6 +35,17 @@ router.get("/InTheaters", (req, res, next) => {
     .catch((err) => {
       console.log(err);
       res.status(500).json({ error: "Failed to retrieve in theaters movies" });
+    });
+});
+
+router.get("/ComingSoon", (req, res, next) => {
+  ComingSoon.find({})
+    .then((items) => {
+      res.send({ items });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ error: "Failed to retrieve coming soon movies" });
     });
 });
 
