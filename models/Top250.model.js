@@ -1,13 +1,16 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the User model to whatever makes sense in this case
-const MovieSchema = new Schema(
-  items[
-    ({
+const top250Schema = new Schema({
       id: {
         type: String,
       },
+      rank: {
+        type: String,
+      },
       title: {
+        type: String,
+      },
+      fullTitle: {
         type: String,
       },
       year: {
@@ -16,35 +19,20 @@ const MovieSchema = new Schema(
       image: {
         type: String,
       },
-      runtimeStr: {
-        type: String,
-      },
-      plot: {
-        type: String,
-      },
-      genres: {
-        type: String,
-      },
-      directors: {
-        type: String,
-      },
-      stars: {
+      crew: {
         type: String,
       },
       imDbRating: {
         type: String,
       },
-      releaseState: {
+      imDbRatingCount: {
         type: String,
       },
       comment: [{ type: Schema.Types.ObjectId, ref: "Comment" }], //since each movie allows more than 1 comment, it should be an array
     },
     {
       timestamps: true,
-    })
-  ]
-);
+    });
 
-const Movie = model("Movie", movieSchema);
+    module.exports = model("Top250", top250Schema);
 
-module.exports = Movie;

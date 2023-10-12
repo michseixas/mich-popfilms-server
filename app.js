@@ -27,6 +27,9 @@ app.use("/user", userRoutes);
 const movieRoutes = require('./routes/movie.routes');
 app.use('/movie', movieRoutes);
 
+const localimdbRoutes = require('./routes/localimdb.routes');
+app.use('/localimdb', localimdbRoutes);
+
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
