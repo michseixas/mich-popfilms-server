@@ -4,6 +4,7 @@ const Top250 = require("../models/Top250.model");
 const MostPopular = require("../models/MostPopular.model");
 const Theater = require("../models/Theater.model");
 const ComingSoon = require("../models/ComingSoon.model");
+const MovieDetails = require("../models/MovieDetails.model")
 
 router.get("/Top250Movies", (req, res, next) => {
   Top250.find({})
@@ -46,6 +47,19 @@ router.get("/ComingSoon", (req, res, next) => {
     .catch((err) => {
       console.log(err);
       res.status(500).json({ error: "Failed to retrieve coming soon movies" });
+    });
+});
+
+router.get("/moviedetails/:movieId", (req, res, next) => {
+  const { movieId } = req.params;
+//get the movie details by the movie ID in the localIMDB database
+  MovieDetails.findOne({ id: movieId })
+    .then((moviedetails) => {
+      res.send({ moviedetails });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ error: "Failed to retrieve movie details" });
     });
 });
 
