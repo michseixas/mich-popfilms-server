@@ -54,8 +54,12 @@ router.get("/moviedetails/:movieId", (req, res, next) => {
   const { movieId } = req.params;
 //get the movie details by the movie ID in the localIMDB database
   MovieDetails.findOne({ id: movieId })
-    .then((moviedetails) => {
-      res.send({ moviedetails });
+    .then((moviedetails) => { 
+      if (moviedetails) {
+        res.send({ moviedetails });
+      } else {
+        res.status(500).json({ error: `could not find the movie with id ${movieId}` })
+      } 
     })
     .catch((err) => {
       console.log(err);
