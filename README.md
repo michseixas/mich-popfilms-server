@@ -5,6 +5,7 @@ POPFILMS - BACK END
 Popfilms is our fullstack final project, featuring a social web app focused on movies. This is the front-end repository.  [here](https://github.com/michseixas/popfilms-server).
 
 ## About us
+Fully updated by Mich Seixas, with her assistant Bô =^..^=
 We are three movie enthusiasts and Ironhack students who have collaborated to create Popfilms, a captivating social web app dedicated to exploring and sharing our love for films.
 
 ![Project Image](images/popfilms-home.jpeg "Project Image")
