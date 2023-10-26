@@ -11,7 +11,7 @@ We are three movie enthusiasts and Ironhack students who have collaborated to cr
 ![Project Image](images/popfilms-home.jpeg "Project Image")
 
 ## Deployment
-You can check the app fully deployed [here](https://popfilms.netlify.app/). 
+You can check the app fully deployed [here](https://popfilms.michseixas.com/). 
 
 ## Installation guide
 - Fork this repo
@@ -82,3 +82,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies ante 
 | GET   | /:movieId                     | const { movieId }     | json({movie})                                                    | Get the movie by ID and send the info.     |
 | POST   | /addComment                     | const { title, description, idComment } = req.body      | message: "created"                                                   | Creates a comment in the database (movieDetail).        |
 # mich-popfilms-server
+
+# Attribution
+This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.

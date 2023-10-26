@@ -8,7 +8,7 @@ function welcomeEmail(username) {
     <p>By registering, you'll receive regular updates filled with movie recommendations, behind-the-scenes insights, film analyses, and exclusive content from industry experts. We encourage you to engage with us and the community by sharing your thoughts, leaving reviews, and connecting with like-minded individuals.</p>
     <p>Thank you for being a part of our community. We can't wait to help you discover new films, explore different genres, and deepen your love for the silver screen.</p>
     <p>Happy movie watching!</p>
-    <p><strong>Mich, Erika & Toni</strong><br>Popfilms Team</p>
+    <p><strong>Mich</strong><br>Popfilms Team</p>
   </div>
     </body>`;
   }
